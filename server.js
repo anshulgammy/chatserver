@@ -23,14 +23,14 @@ io.on('connection', (socket) => {
 	// when new user is connected.
 	socket.on('new_user', (msg) => {
 		console.log('New User Connected : ' + msg);
-		io.emit('new_user', msg);
+		io.emit('new_user_server', msg);
 	});
 	// when new message is received.
 	socket.on('new_msg', (msg) => {
-		socket.broadcast.emit('new_msg', {message: msg.message, username: msg.username});
+		io.emit('new_msg_server', {message: msg.message, username: msg.username});
 	});
 	// when user is typing something.
-	socket.on('typing', (msg) => {
-		socket.broadcast.emit('typing', {username: msg.username});
+	socket.on('whosetyping', (msg) => {
+		io.emit('whosetyping_server', {username: msg.username});
 	});
 });
