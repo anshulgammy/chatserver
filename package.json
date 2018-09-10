@@ -1,0 +1,29 @@
+{
+  "name": "chatserver",
+  "version": "1.0.0",
+  "description": "Tech Brunch Chat Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"startserver" : "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshulgammy/chatserver.git"
+  },
+  "keywords": [
+    "Chat",
+    "Server",
+    "NodeJs"
+  ],
+  "author": "Anshul Gautam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anshulgammy/chatserver/issues"
+  },
+  "homepage": "https://github.com/anshulgammy/chatserver#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
